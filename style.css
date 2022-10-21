@@ -1,0 +1,173 @@
+* {
+    font-family: 'Outfit', sans-serif;
+}
+
+body{
+    background-color: hsl(217, 54%, 11%);
+    font-size: 18px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 0.1px);
+}
+
+.title{
+    color: white;
+}
+
+.title:hover{
+    color: hsl(178, 100%, 50%);
+}
+
+.card {
+    background-color: hsl(216, 50%, 16%);
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+    font-size: small;
+    width: 70vw;
+    padding: 5vw;
+    border-radius: 3vw;
+}
+
+.nft-image{
+    position: relative;
+    width: 100%;
+}
+
+.nft-image img {
+    display:block; 
+    width: 100%;
+    border-radius: 3vw;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color:hsl(178, 100%, 50%);
+    border-radius: 3vw;
+}
+
+.icon{
+    color: white;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 1;
+}
+
+
+.nft-image:hover .overlay {
+    opacity: 0.5;
+  }
+
+.nft-image:hover .overlay .icon img {
+    opacity: 1;
+}
+
+.sale-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    color: hsl(178, 100%, 50%);
+    font-weight: bold;
+    text-align: center;
+}
+
+.price  img {
+    padding: 1vw 1vw 1vw 0vw;
+}
+
+.time-left {
+    display: flex;
+    align-items: center;
+}
+
+.time-left  img {
+    padding: 1vw
+}
+
+.divider {
+    border-top: 1px solid hsl(215, 32%, 27%);
+}
+
+.created-by{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.created-by img{
+    width: 7vw;
+    margin: 2vw 4vw 2vw 0vw;
+    border: 1px solid white;
+    border-radius: 10vw;
+}
+
+.creator{
+    color: white;
+    padding: 1vw;
+}
+
+.creator:hover {
+    color:hsl(178, 100%, 50%);
+}
+
+@media only screen and (min-width: 800px) {
+    .card {
+        width: 20vw;
+        padding: 1vw;
+        border-radius: 0.5vw;
+        font-size: medium;
+    }
+    .nft-image img { 
+        display: block;
+        border-radius: 0.5vw;
+    }
+
+    .overlay{
+        border-radius: 0.5vw;
+    }
+
+    .sale-details{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+    }
+
+    .created-by img{
+        width: 2vw;
+        margin: 1vw 1vw 1vw 0vw;
+        border: 1px solid white;
+        border-radius: 10vw;
+    }
+    .creator{
+        color: white;
+        padding: 0.25vw;
+    }
+
+    .divider {
+        border-top: 2px solid hsl(215, 32%, 27%);
+    }
+    
+
+  }
